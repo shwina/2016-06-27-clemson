@@ -1,22 +1,20 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS.
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # use YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # use YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "FIXME"      # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad:         # optional (insert the URL for your Etherpad if you're using one)
-eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+venue: Clemson University
+address: Barre Hall room B102, 120 McGinty Ct, Clemson, SC 29634
+country: us
+language: en
+latlng: 34.674915,-82.835256
+humandate: Jun 27-28, 2016
+humantime: 9:00 am - 5:00 pm
+startdate: 2016-06-27
+enddate: 2016-06-28
+instructor: ["Linh Ngo", "Ashwin Srinath", "Nuyun Zhang (Nellie)", "Marcin Ziolkowski"]
+helper: []
+contact: atrikut@clemson.edu
+etherpad: http://pad.software-carpentry.org/clemson
 ---
-
 
 <!-- See instructions in the comments below for how to edit specific sections of this workshop template. -->
 
@@ -31,29 +29,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   And run 'tools/check' *before* committing to make sure that changes are good.
 -->
 
-<!--
-  EVENTBRITE
-
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
--->
-{% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="248px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-<h4>This is the workshop template.  Use it to create your own website.
-Delete this line and email the link to your workshop page to admin@software-carpentry.org.
-If this is a self organized workshop, please be sure to include any other details
-Software Carpentry staff may need to know in your email.</h4>
-
 
 <h2 id="general">General Information</h2>
 
@@ -67,9 +42,11 @@ Software Carpentry staff may need to know in your email.</h4>
   <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
   is to help scientists and engineers get more research done in less
   time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
+  scientific computing. This hands-on workshop will cover basic
+  task automation and scripting using the Unix shell,
+  code management and sharing using Git and GitHub,
+  and programming using Python or R (two tracks in parallel).
+  Participants will be encouraged to
   help one another and to apply what they have learned to their own
   research problems.
 </p>
@@ -89,9 +66,9 @@ Software Carpentry staff may need to know in your email.</h4>
 -->
 <p id="who">
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-  <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+  The course is aimed at graduate students and other researchers at Clemson University
+  that have little experience in programming or using computational tools,
+  but are required to/interested in building software to accomplish their research goals.
 </p>
 
 <!--
@@ -125,34 +102,6 @@ Software Carpentry staff may need to know in your email.</h4>
   <a href="#setup">below</a>). They are also required to abide by
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
-</p>
-
-<!--
-  ACCESSIBILITY
-
-  Modify the block below if there are any barriers to accessibility or
-  special instructions.
--->
-<p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organisers have checked that:
-</p>
-<ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
-</ul>
-<p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>get in touch</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>get in touch</a>
-  {% endif %}
-  and we will attempt to provide them. 
 </p>
 
 <!--
@@ -192,23 +141,23 @@ Software Carpentry staff may need to know in your email.</h4>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Day 1</h3>
+    <h3>Monday (27 June)</h3>
     <table class="table table-striped">
       <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
       <tr> <td>10:30</td> <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
-    <h3>Day 2</h3>
+    <h3>Tuesday (28 June)</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
+      <tr> <td>13:00</td>  <td>Building programs with Python or R</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
+      <tr> <td>13:00</td>  <td>Building programs with Python or R</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -284,7 +233,6 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/python-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
-  <!--
   <div class="col-md-6">
     <h3 id="syllabus-r">Programming in R</h3>
     <ul>
@@ -296,7 +244,6 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/r-novice-inflammation/reference.html">Reference...</a></li>
     </ul>
   </div>
-  -->
   <!--
   <div class="col-md-6">
     <h3 id="syllabus-matlab">Programming in MATLAB</h3>
@@ -327,6 +274,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/git-novice/reference.html">Reference...</a></li>
     </ul>
   </div>
+  <!--
   <div class="col-md-6">
     <h3 id="syllabus-sql">Managing Data with SQL</h3>
     <ul>
@@ -341,6 +289,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
     </ul>
   </div>
+  -->
 </div>
 
 <hr/>
@@ -718,43 +667,6 @@ Software Carpentry staff may need to know in your email.</h4>
     </div>
   </div>
 </div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-        The <a href="{{site.swc_github}}/windows-installer">Software Carpentry Windows Installer</a>
-        installs SQLite for Windows.
-        If you used the installer to configure nano, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">Mac OS X</h4>
-      <p>
-        SQLite comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-        SQLite comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-    <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-    Instructors will provide a workaround for it if needed.</strong></p>
-</div> <!-- End of 'SQLite' section. -->
 
 <!--
   Uncomment this section if you are using our virtual machine.
